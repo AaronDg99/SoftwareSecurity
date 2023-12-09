@@ -21,7 +21,6 @@ class ExampleTest extends TestCase
     public function test_sum_of_two_numbers(): void
     {
         $sumaController = app(SumaController::class);
-        //$sum = app('app\Http\Controllers\SumaController')
 
         // Aserción 1: Comprobar la suma de 3 + 3 es igual a 6
         $this->assertEquals(6, $sumaController->add(3, 3));
@@ -81,5 +80,16 @@ class ExampleTest extends TestCase
 
         // Aserción: Comprobar que la suma de 2 + 3 es menor que 10
         $this->assertLessThan(10, $sumaController->add(2, 3));
+    }
+
+    /**
+     * Test if the sum of two numbers is not equal to a given value.
+     */
+    public function test_sum_not_equal_to_given_value_2(): void
+    {
+        $sumaController = app(SumaController::class);
+
+        // Aserción: Comprobar que la suma de 3 + 4 no es igual a 8
+        $this->assertNotEquals(8, $sumaController->add(3, 4));
     }
 }
