@@ -23,6 +23,6 @@ class ExampleTest extends TestCase
         $b = 3;
         $sum = $a + $b;
 
-        $this->assertEquals(5, $sum);
+        $this->assertEquals(6, $sum);
     }
 }
